@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-24",
+  "participants": 42,
+  "labeled_days": 3320,
+  "positive_days": 517,
+  "metrics": [
+    {
+      "model": "majority",
+      "macro_f1": 0.4577821329413686,
+      "balanced_accuracy": 0.5,
+      "roc_auc": 0.5
+    },
+    {
+      "model": "flow_timing_proxy",
+      "macro_f1": 0.5093827325109102,
+      "balanced_accuracy": 0.6049894041407693,
+      "roc_auc": 0.6335219725204619
+    },
+    {
+      "model": "previous_pain",
+      "macro_f1": 0.7806602215419851,
+      "balanced_accuracy": 0.7727400388227313,
+      "roc_auc": 0.7727400388227313
+    },
+    {
+      "model": "logistic_regression",
+      "macro_f1": 0.7156734055811611,
+      "balanced_accuracy": 0.7669521671654644,
+      "roc_auc": 0.8288218412021936
+    },
+    {
+      "model": "decision_tree",
+      "macro_f1": 0.7128205128205128,
+      "balanced_accuracy": 0.7504445706486074,
+      "roc_auc": 0.7752622052498326
+    },
+    {
+      "model": "random_forest",
+      "macro_f1": 0.7704161976671897,
+      "balanced_accuracy": 0.7725530327757425,
+      "roc_auc": 0.827455178928904
+    },
+    {
+      "model": "logistic_without_previous_pain",
+      "macro_f1": 0.5808301248205057,
+      "balanced_accuracy": 0.6576202203911117,
+      "roc_auc": 0.701725700082324
+    },
+    {
+      "model": "random_forest_wearables_only",
+      "macro_f1": 0.5690979254109342,
+      "balanced_accuracy": 0.5670854866056056,
+      "roc_auc": 0.5724469016686322
+    }
+  ],
+  "source_run": "reports/runs/mcphases_2022",
+  "status": "REAL_DATA_EXPLORATORY_CV"
+}

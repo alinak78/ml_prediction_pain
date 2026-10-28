@@ -1,0 +1,501 @@
+[
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Predicting menstrual pain"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 700,
+        "h": 24,
+        "paragraphs": [
+          "Midpoint \u2022 October 28, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "1"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 201.6,
+        "w": 1123.2,
+        "h": 124.8,
+        "paragraphs": [
+          "Using health and lifestyle factors"
+        ],
+        "size": 45.33,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 403.2,
+        "w": 1123.2,
+        "h": 96,
+        "paragraphs": [
+          "Alina Kapanova \u00b7 Fiona Wang \u00b7 Vicky Wang"
+        ],
+        "size": 34.67,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 537.6,
+        "w": 1123.2,
+        "h": 57.6,
+        "paragraphs": [
+          "Midcheckpoint presentation"
+        ],
+        "size": 29.33,
+        "bold": false,
+        "color": "#24342E"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 20 seconds.\nWe are Alina Kapanova, Fiona Wang and Vicky Wang. Our project asks whether health and lifestyle information can anticipate menstrual pain. This checkpoint covers our dataset, completed analysis, initial results and remaining work. We now have real participant-held-out results. Sources: Original proposal (slides 2, 4\u20138); reports/runs/mcphases_2022/metrics.csv and cleaning_audit.json; reports/midpoint_checkpoint.md. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 20
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Background"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "Problem: menstrual pain varies across people and cycles.",
+          "Goal: anticipate moderate-or-higher pain one day ahead.",
+          "Approach: combine prior-day Fitbit signals and symptom history.",
+          "Models: logistic regression, decision tree and random forest."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 700,
+        "h": 24,
+        "paragraphs": [
+          "Midpoint \u2022 October 28, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "2"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 50 seconds.\nMenstrual pain varies across people and cycles and can interfere with daily activities. Our original proposal asks whether sleep, stress, physical activity, physiology and menstrual history can predict severity. We made this concrete as a retrospective one-day-ahead task: predict day t from information recorded on exact day t\u22121. We map Not at all, Very Low/Little and Low to class zero, and Moderate, High and Very High to class one. This is a project threshold, not a clinical cutoff. We compare logistic regression, decision tree and random forest against simple baselines and hold out complete people to assess generalization. Sources: Original proposal (slides 2, 4\u20138); reports/runs/mcphases_2022/metrics.csv and cleaning_audit.json; reports/midpoint_checkpoint.md. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 50
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Dataset / sensing"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "mcPHASES: 42 participants, 23 tables, 3.68 GB uncompressed.",
+          "Analysis: 3,320 labeled days from 2022; 15.6% positive.",
+          "Fitbit Sense: sleep, activity, heart rate/HRV, temperature, breathing.",
+          "Diary: pain, stress, mood, sleep difficulty and flow history.",
+          "Bias: small Toronto cohort; only seven pain labels from 2024."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 700,
+        "h": 24,
+        "paragraphs": [
+          "Midpoint \u2022 October 28, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "3"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 65 seconds.\nWe use the existing mcPHASES v1.0.0 dataset, so our core project requires no new sensor collection. The download contains 23 CSV tables and 3.68 GB of files. The source study used Fitbit Sense, Mira hormone measurements and Dexcom G6 in the first interval. Our selected features come from Fitbit and daily diaries: sleep duration and quality, activity minutes, resting heart rate, HRV, breathing rate, nightly temperature, device stress and diary history. We processed nine tables into 21 prior-day predictors. The primary cohort includes 42 people and 3,320 labeled 2022 days. We excluded 378 first-round days without pain labels and never imputed outcomes. Only seven 2024 days have pain reports, so that interval cannot support a useful external test. The small Toronto cohort, missing sensor data and 15.6% positive prevalence limit generalization. Sources: Original proposal (slides 2, 4\u20138); reports/runs/mcphases_2022/metrics.csv and cleaning_audit.json; reports/midpoint_checkpoint.md. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 65
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Milestones / analysis"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 700,
+        "h": 24,
+        "paragraphs": [
+          "Midpoint \u2022 October 28, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "4"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 628,
+        "w": 1123.2,
+        "h": 35,
+        "paragraphs": [
+          "Optional wearable pilot and pilot comparison: not completed; deferred."
+        ],
+        "size": 23,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "Proposal milestone",
+        "Completed by Oct 24",
+        "Issue / decision"
+      ],
+      [
+        "Download & explore\nOct 9",
+        "Inventory and schema check\nfor all 23 tables",
+        "Access delay; finished Oct 24"
+      ],
+      [
+        "Clean & engineer\nOct 23",
+        "21 prior-day predictors;\nfold-only imputation",
+        "Missing labels; duplicate\nand failed sensor records"
+      ],
+      [
+        "Implement models\nNov 13",
+        "Logistic regression, tree,\nforest + baselines",
+        "Class imbalance;\nfixed model settings"
+      ],
+      [
+        "Evaluate models\nNov 24",
+        "5 participant-held-out folds;\nparticipant-cluster intervals",
+        "Avoid sharing people\nbetween train and test"
+      ],
+      [
+        "Interpret & audit bias\nDec 2",
+        "Initial feature importance\nand supported subgroup audit",
+        "Small groups;\nexploratory findings"
+      ]
+    ],
+    "notes": "Target time: 85 seconds.\nThis table ties our completed work to the proposal. Download and exploration were planned for October 9 but completed on October 24 after the access delay. Initial cleaning and feature construction, planned for October 23, were also completed on October 24; further sensitivity work remains. We verified labels and day keys, removed 3,601 duplicate stress records, filtered failed device scores and set measurements outside broad prespecified bounds to missing. Sleep is assigned to its end day, and all features are lagged by exactly one day. We never bridge missing days or the gap between study rounds, and we exclude retrospective phase labels. Median imputation and missingness filtering are learned inside each training fold. We have already implemented the three proposed models and evaluated them in five participant-held-out folds, ahead of the November model/evaluation milestones. Initial permutation importance, participant-cluster intervals and supported subgroup checks are complete, but final validation and interpretation are not. The optional pilot has not been collected or compared; we have deferred it. Sources: Original proposal (slides 2, 4\u20138); reports/runs/mcphases_2022/metrics.csv and cleaning_audit.json; reports/midpoint_checkpoint.md. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 85,
+    "table_widths": [
+      280,
+      480,
+      363.2
+    ],
+    "table_font_size": 23
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Initial results"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 700,
+        "h": 24,
+        "paragraphs": [
+          "Midpoint \u2022 October 28, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "5"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 628,
+        "w": 1123.2,
+        "h": 36,
+        "paragraphs": [
+          "Added features have not beaten pain history on macro F1; wearables-only F1 = 0.569."
+        ],
+        "size": 22.8,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "Model / baseline",
+        "Macro F1",
+        "Balanced acc.",
+        "ROC-AUC"
+      ],
+      [
+        "Majority class",
+        "0.458",
+        "0.500",
+        "0.500"
+      ],
+      [
+        "Prior flow timing",
+        "0.509",
+        "0.605",
+        "0.634"
+      ],
+      [
+        "Previous-day pain",
+        "0.781",
+        "0.773",
+        "0.773"
+      ],
+      [
+        "Logistic regression",
+        "0.716",
+        "0.767",
+        "0.829"
+      ],
+      [
+        "Decision tree",
+        "0.713",
+        "0.750",
+        "0.775"
+      ],
+      [
+        "Random forest",
+        "0.770",
+        "0.773",
+        "0.827"
+      ]
+    ],
+    "notes": "Target time: 70 seconds.\nThese are pooled out-of-fold results from five participant-grouped folds. The previous-day pain baseline has the highest macro F1 at 0.781. Random forest is the strongest of the three full classifiers at 0.770, and logistic regression is 0.716. The forest and persistence have nearly equal balanced accuracy, about 0.773. Forest detects 320 of 517 moderate-or-higher days, but gives more false positives than persistence: 207 compared with 168. All three classifiers beat the majority baseline, but none beats pain history on macro F1. Wearable-only forest reaches 0.569, and previous pain dominates permutation importance. Two thousand paired participant-cluster bootstrap resamples give a forest-minus-persistence F1 interval of about \u22120.022 to \u22120.002, conditional on fixed predictions. The higher AUC of the full models is not proof of better decisions; persistence uses hard predictions. These results do not establish clinical validity or causality. Sources: Original proposal (slides 2, 4\u20138); reports/runs/mcphases_2022/metrics.csv and cleaning_audit.json; reports/midpoint_checkpoint.md. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 70,
+    "table_widths": [
+      480,
+      205,
+      235,
+      203.2
+    ],
+    "table_font_size": 24
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Next steps / discussion"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 152,
+        "w": 1123.2,
+        "h": 100,
+        "paragraphs": [
+          "Problems: missing data, uncertain timing and no gain over pain history.",
+          "Next: inspect errors and sensitivity; validate any new features with grouped CV."
+        ],
+        "size": 26,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 700,
+        "h": 24,
+        "paragraphs": [
+          "Midpoint \u2022 October 28, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "6"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 623,
+        "w": 1123.2,
+        "h": 40,
+        "paragraphs": [
+          "Pilot deferred; no independent final test cohort yet. Final deadline: Dec 4."
+        ],
+        "size": 23,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "Target in 2026",
+        "Next milestone",
+        "Proposed owner"
+      ],
+      [
+        "Oct 30",
+        "Error and missingness sensitivity",
+        "Vicky + Alina"
+      ],
+      [
+        "Nov 13",
+        "Timing review; nested grouped evaluation",
+        "Alina + Vicky"
+      ],
+      [
+        "Nov 24",
+        "Robustness and subgroup follow-up",
+        "Alina + Fiona"
+      ],
+      [
+        "Dec 2\u20134",
+        "Explainability, final rerun, report and slides",
+        "All"
+      ]
+    ],
+    "notes": "Target time: 70 seconds.\nOur main challenge is demonstrating useful improvement beyond pain history. We also need to check missingness mechanisms, actual report availability and error differences across people. Supported ethnicity groups show different missed-pain rates, but the samples are too small for a fairness conclusion. Only one gender category meets our minimum participant count, and income is absent. Next we will inspect failures and imputation sensitivity by October 30, then review feature timing and use nested participant-grouped validation for any tuning by November 13. We will refine robustness and subgroup comparisons by November 24, freeze explainability and a reproducible rerun by December 2, and finish the report and presentation by December 4. These are proposed work allocations. The optional pilot remains outside the critical path. Because we have already inspected this cohort, it cannot later be called an untouched independent final test. We will report any limited or null benefit honestly. Thank you; we have two minutes for questions. Sources: Original proposal (slides 2, 4\u20138); reports/runs/mcphases_2022/metrics.csv and cleaning_audit.json; reports/midpoint_checkpoint.md. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 70,
+    "table_position": {
+      "left": 76.8,
+      "top": 292,
+      "width": 1123.2,
+      "height": 304
+    },
+    "table_widths": [
+      170,
+      640,
+      313.2
+    ],
+    "table_font_size": 23.5
+  }
+]

@@ -1,0 +1,10 @@
+.DS_Store
+.venv/
+__pycache__/
+.pytest_cache/
+.mplconfig/
+data/**
+!data/raw/
+!data/raw/README.md
+reports/runs/
+.build/

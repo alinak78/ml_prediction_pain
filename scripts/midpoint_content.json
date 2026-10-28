@@ -1,0 +1,493 @@
+[
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48.0,
+        "w": 1152.0,
+        "h": 96.0,
+        "paragraphs": [
+          "Predicting menstrual pain"
+        ],
+        "size": 45.333333333333336,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672.0,
+        "w": 650,
+        "h": 24.0,
+        "paragraphs": [
+          "Midpoint \u2022 October 24, 2026"
+        ],
+        "size": 14.666666666666666,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 201.6,
+        "w": 1104.0,
+        "h": 124.8,
+        "paragraphs": [
+          "Using health and lifestyle factors"
+        ],
+        "size": 45.333333333333336,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 403.2,
+        "w": 1104.0,
+        "h": 96.0,
+        "paragraphs": [
+          "Alina Kapanova \u00b7 Fiona Wang \u00b7 Vicky Wang"
+        ],
+        "size": 34.666666666666664,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 537.6,
+        "w": 1104.0,
+        "h": 57.6,
+        "paragraphs": [
+          "Real-data checkpoint \u2022 Participant-held-out evaluation"
+        ],
+        "size": 29.333333333333332,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "1"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 20 seconds.\nIntroduce Alina Kapanova, Fiona Wang and Vicky Wang. We have processed mcPHASES and run the first real models. The main finding is that previous pain is a strong baseline and the extra features have not yet improved macro F1. Source: reports/midpoint_checkpoint.md."
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48.0,
+        "w": 1152.0,
+        "h": 96.0,
+        "paragraphs": [
+          "Problem and approach"
+        ],
+        "size": 45.333333333333336,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "Can prior-day signals predict next-day menstrual cramp severity?",
+          "Target: no/low versus moderate-or-higher pain.",
+          "Combine Fitbit measurements with diary and flow history.",
+          "Compare three classifiers with simple baselines on unseen participants."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672.0,
+        "w": 650,
+        "h": 24.0,
+        "paragraphs": [
+          "Midpoint \u2022 October 24, 2026"
+        ],
+        "size": 14.666666666666666,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "2"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 45 seconds.\nPain varies across people and cycles. We predict day t from exact day t\u22121 information. Not at all, Very Low/Little and Low are class zero; Moderate, High and Very High are class one. This mapping is a project convention, not a clinical threshold. The task is retrospective and assumes prior-day data were available; deployment latency is not established. This is feasibility research, not a diagnostic system.\nSource: reports/midpoint_checkpoint.md; reports/runs/mcphases_2022/metrics.csv; downloaded mcPHASES v1.0.0 README. Dataset: https://physionet.org/content/mcphases/1.0.0/"
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48.0,
+        "w": 1152.0,
+        "h": 96.0,
+        "paragraphs": [
+          "mcPHASES: dataset and sensing"
+        ],
+        "size": 45.333333333333336,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "23 CSV tables; 3.68 GB uncompressed; Fitbit Sense and daily diaries.",
+          "42 participants; 5,659 diary days across two study intervals.",
+          "Primary analysis: 3,320 labeled days from 2022.",
+          "517 moderate-or-higher days (15.6%); 2024 has only 7 labeled days.",
+          "Small Toronto-area cohort limits generalization."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672.0,
+        "w": 650,
+        "h": 24.0,
+        "paragraphs": [
+          "Midpoint \u2022 October 24, 2026"
+        ],
+        "size": 14.666666666666666,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "3"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 60 seconds.\nThe full source study also used Mira hormone measurements and Dexcom G6 in interval one. We use nine source tables for 21 prior-day predictors: activity, sleep, physiology and diary history. There are 110.1 million records across all tables, mostly repeated sensor samples, not independent participants. Of 3,698 first-round diary days, 378 lack pain labels and are excluded. Only seven second-round days have cramp responses, so we exclude 2024 from the primary analysis. No new sensor pilot has been collected. Recent hormonal contraception and diabetes were exclusion criteria.\nSource: reports/midpoint_checkpoint.md; reports/runs/mcphases_2022/metrics.csv; downloaded mcPHASES v1.0.0 README. Dataset: https://physionet.org/content/mcphases/1.0.0/"
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48.0,
+        "w": 1152.0,
+        "h": 96.0,
+        "paragraphs": [
+          "Completed processing and analysis"
+        ],
+        "size": 45.333333333333336,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "Verified labels and daily keys; excluded missing pain outcomes.",
+          "Filtered failed sensor values and duplicate stress-score records.",
+          "Built 21 exact prior-day predictors; excluded retrospective phase labels.",
+          "Ran five folds grouped by participant; preprocessing fitted within folds.",
+          "Added baseline checks, feature ablations, uncertainty and bias audits."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672.0,
+        "w": 650,
+        "h": 24.0,
+        "paragraphs": [
+          "Midpoint \u2022 October 24, 2026"
+        ],
+        "size": 14.666666666666666,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "4"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 60 seconds.\nMain milestones are now complete through initial evaluation. We read the actual files and codebook. Main sleep uses its end day; distinct repeated daily summaries use median values. We removed 3,601 exact duplicate first-round Fitbit stress records and invalid zero/failed scores. Broad prespecified bounds set 782 resting heart-rate values, 53 respiratory measurements and 7 HRV records to missing. HRV requires coverage at least 0.8. Feature missingness is 1.2 to 44.0 percent. Exact day joins avoid crossing gaps. We never impute pain, and imputation/filtering use training folds only. Eight tests pass. Hyperparameters were fixed; no independent final test set exists.\nSource: reports/midpoint_checkpoint.md; reports/runs/mcphases_2022/metrics.csv; downloaded mcPHASES v1.0.0 README. Dataset: https://physionet.org/content/mcphases/1.0.0/"
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48.0,
+        "w": 1152.0,
+        "h": 96.0,
+        "paragraphs": [
+          "Pain history remains the strongest baseline"
+        ],
+        "size": 45.333333333333336,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672.0,
+        "w": 650,
+        "h": 24.0,
+        "paragraphs": [
+          "Midpoint \u2022 October 24, 2026"
+        ],
+        "size": 14.666666666666666,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "5"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 628,
+        "w": 1123.2,
+        "h": 36,
+        "paragraphs": [
+          "Wearables-only forest: F1 0.569. No improvement over pain history yet."
+        ],
+        "size": 23,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "Model / baseline",
+        "Macro F1",
+        "Balanced acc.",
+        "ROC-AUC"
+      ],
+      [
+        "Majority class",
+        "0.458",
+        "0.500",
+        "0.500"
+      ],
+      [
+        "Prior flow timing",
+        "0.509",
+        "0.605",
+        "0.634"
+      ],
+      [
+        "Previous-day pain",
+        "0.781",
+        "0.773",
+        "0.773"
+      ],
+      [
+        "Logistic regression",
+        "0.716",
+        "0.767",
+        "0.829"
+      ],
+      [
+        "Decision tree",
+        "0.713",
+        "0.750",
+        "0.775"
+      ],
+      [
+        "Random forest",
+        "0.770",
+        "0.773",
+        "0.827"
+      ]
+    ],
+    "notes": "Target time: 80 seconds.\nThese are pooled out-of-fold scores from five participant-grouped folds. Persistence macro F1 is 0.781; forest is 0.770, so the added features have not beaten the simple baseline. Forest and persistence balanced accuracies both round to 0.773. Logistic and forest AUCs are about 0.83, but persistence uses hard predictions rather than a full probability ranking. A forest restricted to wearables reaches only 0.569 F1; a logistic model without previous pain reaches 0.581. Previous pain dominates held-out permutation importance. Two thousand participant-cluster bootstrap resamples give F1 intervals 0.716\u20130.826 for persistence and 0.699\u20130.821 for forest; the paired difference is about \u22120.010 with interval \u22120.022 to \u22120.002. These intervals condition on fixed OOF predictions. Forest catches 320 of 517 moderate-or-higher days and misses 197. Do not claim wearable value, clinical validity or causality.\nSource: reports/midpoint_checkpoint.md; reports/runs/mcphases_2022/metrics.csv; downloaded mcPHASES v1.0.0 README. Dataset: https://physionet.org/content/mcphases/1.0.0/",
+    "table_widths": [
+      480,
+      205,
+      235,
+      203.2
+    ],
+    "table_font_size": 24
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48.0,
+        "w": 1152.0,
+        "h": 96.0,
+        "paragraphs": [
+          "Revised milestone timeline"
+        ],
+        "size": 45.333333333333336,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672.0,
+        "w": 650,
+        "h": 24.0,
+        "paragraphs": [
+          "Midpoint \u2022 October 24, 2026"
+        ],
+        "size": 14.666666666666666,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "6"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "Target",
+        "Deliverable",
+        "Proposed owner"
+      ],
+      [
+        "Oct 24 \u2713",
+        "Data processing + first models complete",
+        "Team"
+      ],
+      [
+        "Oct 30",
+        "Error and missingness sensitivity",
+        "Vicky + Alina"
+      ],
+      [
+        "Nov 6\u201313",
+        "Timing review; nested grouped validation",
+        "Alina + Vicky"
+      ],
+      [
+        "Nov 24",
+        "Robustness and subgroup follow-up",
+        "Alina + Fiona"
+      ],
+      [
+        "Dec 2",
+        "Explainability and frozen final rerun",
+        "Alina + Vicky"
+      ],
+      [
+        "Dec 4",
+        "Final report and presentation",
+        "All"
+      ]
+    ],
+    "notes": "Target time: 55 seconds.\nThese are proposed team allocations and dates in 2026. Data processing and initial grouped evaluation are complete on October 24. Next inspect missingness and errors, review prospective feature timing, and use nested grouped validation for any tuning. The optional pilot remains outside the core path until a feasible protocol and devices exist. All team members review the final output.\nSource: reports/midpoint_checkpoint.md; reports/runs/mcphases_2022/metrics.csv; downloaded mcPHASES v1.0.0 README. Dataset: https://physionet.org/content/mcphases/1.0.0/"
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48.0,
+        "w": 1152.0,
+        "h": 96.0,
+        "paragraphs": [
+          "Discussion and next steps"
+        ],
+        "size": 45.333333333333336,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "No model has beaten previous-day pain on macro F1.",
+          "Check forecast timing, missingness and failure cases before tuning.",
+          "Subgroup error gaps are exploratory; gender comparisons lack support.",
+          "Use nested grouped evaluation; no independent final test cohort yet.",
+          "Next goal: test whether additional signals offer useful improvement."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672.0,
+        "w": 650,
+        "h": 24.0,
+        "paragraphs": [
+          "Midpoint \u2022 October 24, 2026"
+        ],
+        "size": 14.666666666666666,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "7"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 40 seconds.\nAmong supported ethnicity groups, forest false-negative rates range roughly 26 to 59 percent. Minimum group size is five participants and ten days of each class; these estimates are exploratory. Only Woman has at least five participants, so gender comparisons are unsupported. Income is absent in the downloaded demographic table despite the README mentioning it. The 2024 interval has only seven labels and cannot serve as a useful external test here. The full cohort has now been inspected; further work cannot call it an untouched final holdout. A limited or null wearable benefit is a valid finding. Stop at six minutes and allow two minutes for questions.\nSource: reports/midpoint_checkpoint.md; reports/runs/mcphases_2022/metrics.csv; downloaded mcPHASES v1.0.0 README. Dataset: https://physionet.org/content/mcphases/1.0.0/"
+  }
+]

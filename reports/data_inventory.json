@@ -1,0 +1,406 @@
+[
+  {
+    "file": "LICENSE.txt",
+    "bytes": 2348
+  },
+  {
+    "file": "README.txt",
+    "bytes": 17191
+  },
+  {
+    "file": "SHA256SUMS.txt",
+    "bytes": 2108
+  },
+  {
+    "file": "active_minutes.csv",
+    "bytes": 163418,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "sedentary",
+      "lightly",
+      "moderately",
+      "very"
+    ],
+    "rows": 5552
+  },
+  {
+    "file": "active_zone_minutes.csv",
+    "bytes": 5813277,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "heart_zone_id",
+      "total_minutes"
+    ],
+    "rows": 154482
+  },
+  {
+    "file": "altitude.csv",
+    "bytes": 2759720,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "altitude"
+    ],
+    "rows": 90878
+  },
+  {
+    "file": "calories.csv",
+    "bytes": 646029536,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "calories"
+    ],
+    "rows": 20166975
+  },
+  {
+    "file": "computed_temperature.csv",
+    "bytes": 757037,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "sleep_start_day_in_study",
+      "sleep_start_timestamp",
+      "sleep_end_day_in_study",
+      "sleep_end_timestamp",
+      "type",
+      "temperature_samples",
+      "nightly_temperature",
+      "baseline_relative_sample_sum",
+      "baseline_relative_sample_sum_of_squares",
+      "baseline_relative_nightly_standard_deviation",
+      "baseline_relative_sample_standard_deviation"
+    ],
+    "rows": 5575
+  },
+  {
+    "file": "demographic_vo2_max.csv",
+    "bytes": 817349,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "demographic_vo2_max",
+      "demographic_vo2_max_error",
+      "filtered_demographic_vo2_max",
+      "filtered_demographic_vo2_max_error"
+    ],
+    "rows": 11482
+  },
+  {
+    "file": "distance.csv",
+    "bytes": 243757104,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "distance"
+    ],
+    "rows": 7666949
+  },
+  {
+    "file": "estimated_oxygen_variation.csv",
+    "bytes": 96800549,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "infrared_to_red_signal_ratio"
+    ],
+    "rows": 3070312
+  },
+  {
+    "file": "exercise.csv",
+    "bytes": 8384068,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "start_day_in_study",
+      "start_timestamp",
+      "last_modified_day_in_study",
+      "last_modified_timestamp",
+      "original_start_day_in_study",
+      "original_start_timestamp",
+      "originalduration",
+      "activityname",
+      "activitytypeid",
+      "activitylevel",
+      "averageheartrate",
+      "calories",
+      "duration",
+      "activeduration",
+      "steps",
+      "logtype",
+      "manualvaluesspecified",
+      "heartratezones",
+      "activezoneminutes",
+      "elevationgain",
+      "hasgps",
+      "shouldfetchdetails",
+      "hasactivezoneminutes"
+    ],
+    "rows": 7282
+  },
+  {
+    "file": "glucose.csv",
+    "bytes": 24701654,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "glucose_value"
+    ],
+    "rows": 837130
+  },
+  {
+    "file": "heart_rate.csv",
+    "bytes": 2019747001,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "bpm",
+      "confidence"
+    ],
+    "rows": 63100276
+  },
+  {
+    "file": "heart_rate_variability_details.csv",
+    "bytes": 24540662,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "rmssd",
+      "coverage",
+      "low_frequency",
+      "high_frequency"
+    ],
+    "rows": 436262
+  },
+  {
+    "file": "height_and_weight.csv",
+    "bytes": 586,
+    "columns": [
+      "id",
+      "height_2022",
+      "weight_2022",
+      "height_2024",
+      "weight_2024"
+    ],
+    "rows": 42
+  },
+  {
+    "file": "hormones_and_selfreport.csv",
+    "bytes": 696070,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "phase",
+      "lh",
+      "estrogen",
+      "pdg",
+      "flow_volume",
+      "flow_color",
+      "appetite",
+      "exerciselevel",
+      "headaches",
+      "cramps",
+      "sorebreasts",
+      "fatigue",
+      "sleepissue",
+      "moodswing",
+      "stress",
+      "foodcravings",
+      "indigestion",
+      "bloating"
+    ],
+    "rows": 5659
+  },
+  {
+    "file": "respiratory_rate_summary.csv",
+    "bytes": 553304,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "full_sleep_breathing_rate",
+      "full_sleep_standard_deviation",
+      "full_sleep_signal_to_noise",
+      "deep_sleep_breathing_rate",
+      "deep_sleep_standard_deviation",
+      "deep_sleep_signal_to_noise",
+      "light_sleep_breathing_rate",
+      "light_sleep_standard_deviation",
+      "light_sleep_signal_to_noise",
+      "rem_sleep_breathing_rate",
+      "rem_sleep_standard_deviation",
+      "rem_sleep_signal_to_noise"
+    ],
+    "rows": 6301
+  },
+  {
+    "file": "resting_heart_rate.csv",
+    "bytes": 704587,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "value",
+      "error"
+    ],
+    "rows": 13737
+  },
+  {
+    "file": "sleep.csv",
+    "bytes": 54722273,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "sleep_start_day_in_study",
+      "sleep_start_timestamp",
+      "sleep_end_day_in_study",
+      "sleep_end_timestamp",
+      "duration",
+      "minutestofallasleep",
+      "minutesasleep",
+      "minutesawake",
+      "minutesafterwakeup",
+      "timeinbed",
+      "efficiency",
+      "type",
+      "infocode",
+      "levels",
+      "mainsleep"
+    ],
+    "rows": 14765
+  },
+  {
+    "file": "sleep_score.csv",
+    "bytes": 332975,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "overall_score",
+      "composition_score",
+      "revitalization_score",
+      "duration_score",
+      "deep_sleep_in_minutes",
+      "resting_heart_rate",
+      "restlessness"
+    ],
+    "rows": 5308
+  },
+  {
+    "file": "steps.csv",
+    "bytes": 227195434,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "steps"
+    ],
+    "rows": 7666949
+  },
+  {
+    "file": "stress_score.csv",
+    "bytes": 532610,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "stress_score",
+      "sleep_points",
+      "max_sleep_points",
+      "responsiveness_points",
+      "max_responsiveness_points",
+      "exertion_points",
+      "max_exertion_points",
+      "status",
+      "calculation_failed"
+    ],
+    "rows": 7932
+  },
+  {
+    "file": "subject-info.csv",
+    "bytes": 3539,
+    "columns": [
+      "id",
+      "birth_year",
+      "gender",
+      "ethnicity",
+      "education",
+      "sexually_active",
+      "self_report_menstrual_health_literacy",
+      "age_of_first_menarche"
+    ],
+    "rows": 42
+  },
+  {
+    "file": "time_in_heart_rate_zones.csv",
+    "bytes": 213910,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "in_default_zone_3",
+      "in_default_zone_2",
+      "in_default_zone_1",
+      "below_default_zone_1"
+    ],
+    "rows": 5553
+  },
+  {
+    "file": "wrist_temperature.csv",
+    "bytes": 316909055,
+    "columns": [
+      "id",
+      "study_interval",
+      "is_weekend",
+      "day_in_study",
+      "timestamp",
+      "temperature_diff_from_baseline"
+    ],
+    "rows": 6856019
+  }
+]

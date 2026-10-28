@@ -1,0 +1,9 @@
+{
+  "schema_status": "EXAMPLE ONLY: replace filenames, columns, and label values after inspecting authorized files",
+  "label_map": {"none": 0, "mild": 0, "moderate": 1, "severe": 1},
+  "outcomes": {"file": "REPLACE_self_report.csv", "id": "id", "day": "day_in_study", "pain": "REPLACE_cramp_column"},
+  "tables": [
+    {"file": "REPLACE_daily_sleep.csv", "id": "id", "day": "day_in_study", "features": {"REPLACE_sleep_duration": {"name": "sleep_duration", "agg": "mean"}}},
+    {"file": "REPLACE_daily_activity.csv", "id": "id", "day": "day_in_study", "features": {"REPLACE_active_minutes": {"name": "active_minutes", "agg": "sum"}}}
+  ]
+}
