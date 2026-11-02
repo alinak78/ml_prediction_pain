@@ -1,0 +1,731 @@
+[
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Predicting menstrual pain"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "1. Title \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "1"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 201.6,
+        "w": 1123.2,
+        "h": 124.8,
+        "paragraphs": [
+          "Using health and lifestyle factors"
+        ],
+        "size": 45.33,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 403.2,
+        "w": 1123.2,
+        "h": 96,
+        "paragraphs": [
+          "Alina Kapanova \u00b7 Fiona Wang \u00b7 Vicky Wang"
+        ],
+        "size": 34.67,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 537.6,
+        "w": 1123.2,
+        "h": 57.6,
+        "paragraphs": [
+          "Midcheckpoint presentation"
+        ],
+        "size": 29.33,
+        "bold": false,
+        "color": "#24342E"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 15 seconds.\nIntroduce Alina Kapanova, Fiona Wang and Vicky Wang. We studied whether health and lifestyle factors can anticipate next-day pain. Today we report a complete initial analysis and the main finding: pain history remains a strong baseline. Sources: original proposal; reports/midpoint_checkpoint.md; saved mcPHASES_2022 metrics, cleaning audit and permutation importance. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 15
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Predicting next-day menstrual pain"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "Problem: menstrual pain varies across people and cycles.",
+          "Prediction: next-day no/low vs. moderate-or-higher pain.",
+          "Inputs: prior-day physiology, lifestyle and symptom history.",
+          "Goal: test whether these signals add value beyond pain history."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "2. Background \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "2"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 35 seconds.\nMenstrual pain varies across people and cycles. Our proposal asks whether sleep, stress, activity, physiology and menstrual history provide useful information. We made the task concrete: predict day-t pain using exact day t\u22121 data. The binary grouping follows observed labels and is a project convention, not a clinical cutoff. We combine Fitbit signals and diaries, then compare three classifiers with simple baselines for unseen participants. Sources: original proposal; reports/midpoint_checkpoint.md; saved mcPHASES_2022 metrics, cleaning audit and permutation importance. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 35
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Dataset and cohort"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "42 participants \u2022 23 tables \u2022 3.68 GB of extracted files",
+          "3,320 labeled 2022 days; 517 moderate-or-higher days (15.6%)",
+          "Fitbit Sense: sleep, activity, resting HR/HRV, temperature, breathing",
+          "Diary: pain, stress, mood, sleep difficulty and flow history",
+          "2024 has only seven pain labels; not used in the primary analysis."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "3. Dataset / sensing \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "3"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 35 seconds.\nThe existing mcPHASES download has 23 tables and 3.68 GB of files. We use 42 participants and 3,320 labeled days from 2022. Missing outcomes are excluded. Positive labels represent 15.6% of days. The later interval has only seven pain reports and is excluded from the headline results. We use nine Fitbit and diary tables for 21 predictors; source hardware is Fitbit Sense. No new pilot is part of this analysis. Sources: original proposal; reports/midpoint_checkpoint.md; saved mcPHASES_2022 metrics, cleaning audit and permutation importance. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 35
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Completed cleaning and features"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "Verified outcome labels; excluded 378 missing pain outcomes.",
+          "Removed duplicates and invalid device scores; checked plausible ranges.",
+          "Prepared 21 prior-day predictors from nine source tables.",
+          "Used exact day t\u22121 joins and sleep-end-day alignment.",
+          "Kept imputation and missingness filtering inside training folds."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "4. Milestones / analysis \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "4"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 40 seconds.\nWe inspected the codebook and real schemas, mapped the ordered pain responses and prepared daily features. We excluded 378 missing outcomes, removed 3,601 duplicate stress records and rejected failed or in-progress scores. Broad prespecified bounds flag impossible measurements as missing, and HRV requires adequate coverage. Sleep is assigned to its end day. Exact lagging avoids bridging missing days or study rounds. We exclude retrospective hormone phase labels; imputation is learned inside training folds. Sources: original proposal; reports/midpoint_checkpoint.md; saved mcPHASES_2022 metrics, cleaning audit and permutation importance. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 40
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Completed analysis milestones"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "4. Milestones / analysis \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "5"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "Proposal work",
+        "Completed output"
+      ],
+      [
+        "Data preparation",
+        "Audited daily dataset and 21 predictors"
+      ],
+      [
+        "Model implementation",
+        "Logistic regression, decision tree, random forest"
+      ],
+      [
+        "Validation",
+        "5 participant-held-out folds + baseline comparison"
+      ],
+      [
+        "Interpretation and bias",
+        "Permutation importance, uncertainty and subgroup audit"
+      ]
+    ],
+    "notes": "Target time: 40 seconds.\nDownload and initial preparation were completed October 24 after the access delay. The three proposed classifiers are implemented, together with three baselines and two feature-ablation checks. We have five participant-held-out folds, confusion matrices, participant-cluster uncertainty, initial explainability and supported subgroup checks. Twelve targeted tests pass and code is on GitHub. Initial interpretation is complete; remaining work is final checking and communication. The optional pilot was not collected and is outside the final deliverable scope. Sources: original proposal; reports/midpoint_checkpoint.md; saved mcPHASES_2022 metrics, cleaning audit and permutation importance. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 40,
+    "table_widths": [
+      360,
+      763.2
+    ],
+    "table_font_size": 27
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Matched models show added ranking information"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "5. Initial results \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "6"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 625,
+        "w": 1123.2,
+        "h": 37,
+        "paragraphs": [
+          "AP improves 0.460 \u2192 0.512 with wearables; macro F1 decreases 0.781 \u2192 0.760."
+        ],
+        "size": 22,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 50 seconds.\nThis is the same random forest, preprocessing, participants and five folds, with feature sets changed. Adding wearables to previous pain increases average precision from 0.460 to 0.512, with a paired conditional bootstrap interval about +0.007 to +0.081. Macro F1 falls from 0.781 to 0.760 at the default rule, so ranking improves without better overall classifications. All features reach AP 0.555, but that also includes diary predictors. Missingness indicators are part of the feature package. These are exploratory follow-ups after inspecting the initial cohort. Source: reports/wearable_followup.md.",
+    "seconds": 50,
+    "chart": {
+      "categories": [
+        "Wearables only",
+        "Previous pain only",
+        "Previous pain + wearables",
+        "All features"
+      ],
+      "values": [
+        0.218798,
+        0.460264,
+        0.51229,
+        0.554952
+      ],
+      "series_name": "Average precision",
+      "axis_max": 1,
+      "format": "0.000",
+      "position": {
+        "left": 76.8,
+        "top": 155,
+        "width": 1123.2,
+        "height": 448
+      }
+    }
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Can wearables anticipate new pain onset?"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 150,
+        "w": 1123.2,
+        "h": 45,
+        "paragraphs": [
+          "2,603 days after no/low pain \u2022 177 new onsets (6.8%)"
+        ],
+        "size": 28,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "5. Initial results \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "7"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 625,
+        "w": 1123.2,
+        "h": 37,
+        "paragraphs": [
+          "History + wearables: 18.5% precision, 5.6% recall; detection remains limited."
+        ],
+        "size": 22.5,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "Same RF feature set",
+        "Detected / 177",
+        "False alarms"
+      ],
+      [
+        "Previous pain only",
+        "0",
+        "0"
+      ],
+      [
+        "Previous pain + wearables",
+        "10",
+        "44"
+      ],
+      [
+        "Wearables only",
+        "38",
+        "302"
+      ],
+      [
+        "All features",
+        "8",
+        "41"
+      ]
+    ],
+    "notes": "Target time: 40 seconds.\nWe evaluated existing OOF predictions only on days preceded by observed no/low pain. There are 177 onsets among 2,603 eligible days. Persistence and the history-only forest detect none. Adding wearables catches 10 but generates 44 false alarms: precision 18.5 percent and recall 5.6 percent. Wearables alone find 38 at the cost of 302 false alarms. Thus there is some additional signal, but onset detection is weak and there is a trade-off. No onset-specific model or threshold was tuned. This is secondary exploratory analysis. Source: reports/wearable_followup.md.",
+    "seconds": 40,
+    "table_widths": [
+      620,
+      250,
+      253.2
+    ],
+    "table_font_size": 26,
+    "table_position": {
+      "left": 76.8,
+      "top": 215,
+      "width": 1123.2,
+      "height": 375
+    }
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Errors and subgroup limitations"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "5. Initial results \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "8"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 76.8,
+        "y": 460,
+        "w": 1123.2,
+        "h": 140,
+        "paragraphs": [
+          "61.9% sensitivity: 320 of 517 positive days detected.",
+          "Small cohort and exploratory subgroup gaps constrain generalization."
+        ],
+        "size": 28,
+        "bold": false,
+        "color": "#24342E"
+      }
+    ],
+    "table": [
+      [
+        "Random forest",
+        "Predicted no/low",
+        "Predicted moderate+"
+      ],
+      [
+        "Actual no/low",
+        "2,596",
+        "207"
+      ],
+      [
+        "Actual moderate+",
+        "197",
+        "320"
+      ]
+    ],
+    "notes": "Target time: 35 seconds.\nForest finds 320 of 517 moderate-or-higher days but misses 197. Compared with persistence it finds seven extra positive days at the cost of 39 more false alarms. In supported ethnicity groups, missed-pain rates vary approximately 26% to 59%, but the groups are small and comparisons are exploratory. Only one gender category meets our minimum group threshold. There is no independent final test cohort or clinical validation. Sources: original proposal; reports/midpoint_checkpoint.md; saved mcPHASES_2022 metrics, cleaning audit and permutation importance. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 35,
+    "table_widths": [
+      400,
+      340,
+      383.2
+    ],
+    "table_font_size": 27,
+    "table_position": {
+      "left": 76.8,
+      "top": 165,
+      "width": 1123.2,
+      "height": 252
+    }
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "Core analysis complete; final refinements remain"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 172.8,
+        "w": 1123.2,
+        "h": 450,
+        "paragraphs": [
+          "Completed: processing, model comparison, uncertainty and interpretation.",
+          "Finding: wearables improve ranking; overall macro F1 remains below pain history.",
+          "Remaining: final checks, clearer figures and the written presentation of results.",
+          "Limits stay explicit: selected cohort, missing data and no independent test."
+        ],
+        "size": 32,
+        "bold": false,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "6. Next steps / discussion \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "9"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": null,
+    "notes": "Target time: 30 seconds.\nThe complete analysis now isolates wearable contribution with matched forests and tests new onset. Wearables provide a modest ranking benefit beyond history, but current overall macro F1 is lower and onset recall remains limited. All follow-ups reuse the previously inspected cohort and are exploratory. The completed comparisons strengthen the answer without claiming practical or clinical readiness. Remaining work stays final checks, figure explanations, report preparation and submission, due November 30. Source: reports/wearable_followup.md.",
+    "seconds": 30
+  },
+  {
+    "boxes": [
+      {
+        "x": 67.2,
+        "y": 48,
+        "w": 1152,
+        "h": 96,
+        "paragraphs": [
+          "October complete; final tasks due November 30"
+        ],
+        "size": 45.33,
+        "bold": true,
+        "color": "#24342E"
+      },
+      {
+        "x": 76.8,
+        "y": 672,
+        "w": 950,
+        "h": 24,
+        "paragraphs": [
+          "6. Next steps / discussion \u2022 October 29, 2026"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      },
+      {
+        "x": 1180,
+        "y": 672,
+        "w": 40,
+        "h": 24,
+        "paragraphs": [
+          "10"
+        ],
+        "size": 14.67,
+        "bold": false,
+        "color": "#29695B"
+      }
+    ],
+    "table": [
+      [
+        "When / status",
+        "Completion task",
+        "Proposed owner"
+      ],
+      [
+        "October \u2014 done",
+        "Data audit, models, evaluation and count checks",
+        "Team"
+      ],
+      [
+        "Nov 30",
+        "Finalize figures, tables and feature explanations",
+        "Alina + Vicky"
+      ],
+      [
+        "Nov 30",
+        "Complete final report and discussion",
+        "Alina + Fiona"
+      ],
+      [
+        "Nov 30",
+        "Final consistency check and presentation rehearsal",
+        "All"
+      ],
+      [
+        "Nov 30",
+        "Submit report, code and presentation",
+        "All"
+      ]
+    ],
+    "notes": "Target time: 40 seconds.\nThese are proposed owners for final delivery, not new major research milestones. The October data audit, processing, model evaluation and count checks are complete. All remaining tasks are due November 30, 2026: finalize figures and explanations, finish the report, check consistency, rehearse and submit. The analysis pipeline and initial results already exist. No new sensing cohort or model rebuild is needed to complete this scope. Thank the audience and leave two minutes for questions. Sources: original proposal; reports/midpoint_checkpoint.md; saved mcPHASES_2022 metrics, cleaning audit and permutation importance. Dataset: https://physionet.org/content/mcphases/1.0.0/.",
+    "seconds": 40,
+    "table_widths": [
+      210,
+      600,
+      313.2
+    ],
+    "table_font_size": 23.5
+  }
+]

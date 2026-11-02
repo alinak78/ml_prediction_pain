@@ -8,3 +8,13 @@ data/**
 !data/raw/README.md
 reports/runs/
 .build/
+.chart-data-*/
+
+# Locally supplied literature and proposal PDFs; cite their public sources.
+/*.pdf
+
+# Presentation/document review renders and local QA receipts.
+/output/review_*/
+/output/reports/qa_*/
+/output/reports/*verification.json
+/output/reports/midpoint_report_content.json

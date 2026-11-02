@@ -7,6 +7,8 @@ const {Presentation,PresentationFile}=await import(pathToFileURL(requireFromRunt
 const root=process.cwd();
 const content=JSON.parse(await fs.readFile(path.join(root,process.argv[3] || 'scripts/midpoint_content.json'),'utf8'));
 const tableOwners=content.flatMap((item,i)=>item.table ? [i+1] : []);
+const chartOwners=content.flatMap((item,i)=>item.chart ? [i+1] : []);
+const {applyPresentationChartFont}=await import('file:///Users/alina/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040/skills/presentations/container_tools/artifact_tool_utils.mjs');
 const p=Presentation.create({slideSize:{width:1280,height:720}});
 for (const item of content){
  const s=p.slides.add(); s.background.fill='#F7F5F0'; s.speakerNotes.text=item.notes;
@@ -21,6 +23,19 @@ for (const item of content){
    y+=h+18;
   }
  }
+ if(item.chart){
+  const cfg=item.chart;
+  const chart=s.charts.add('bar',{
+   position:cfg.position,categories:cfg.categories,
+   series:[{name:cfg.series_name,values:cfg.values,fill:'#29695B'}],
+   barOptions:{direction:'bar',grouping:'clustered',gapWidth:65},hasLegend:false,
+   xAxis:{textStyle:{fontSize:22,fill:'#24342E'},line:{fill:'#C8CECA',width:1}},
+   yAxis:{min:0,max:cfg.axis_max,majorUnit:cfg.axis_max<=.3?.05:.2,numberFormatCode:cfg.axis_max<=.3?'0.00':'0.0',title:{text:cfg.series_name,textStyle:{fontSize:18,fill:'#24342E'}},textStyle:{fontSize:19,fill:'#24342E'},majorGridlines:{fill:'#D9DEDA',width:1}},
+   dataLabels:{showValue:true,position:'outEnd',numberFormatCode:cfg.format,textStyle:{fontSize:22,fill:'#24342E'}},
+   chartFill:'#F7F5F0',plotAreaFill:'#F7F5F0'
+  });
+  applyPresentationChartFont(chart,{fontFamily:'Aptos'});
+ }
  if(item.table){
   const table=s.tables.add({rows:item.table.length,columns:item.table[0].length,...(item.table_position || {left:76.8,top:163.2,width:1123.2,height:451.2}),columnWidths:item.table_widths || [158.4,633.6,331.2],values:item.table});
   table.cells.block({row:0,column:0,rowCount:item.table.length,columnCount:item.table[0].length}).assign({fill:'#F7F5F0',textStyle:{fontFamily:'Aptos',fontSize:item.table_font_size || 25.33,color:'#24342E'}});
@@ -30,4 +45,4 @@ for (const item of content){
 await (await PresentationFile.exportPptx(p)).save(path.join(root,'.build/midpoint_real_candidate.pptx'));
 const {finalizePresentation}=await import('file:///Users/alina/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040/skills/presentations/container_tools/artifact_tool_utils.mjs');
 const skill='/Users/alina/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040/skills/presentations';
-await finalizePresentation({workspaceDir:root,candidatePath:path.join(root,'.build/midpoint_real_candidate.pptx'),finalPath:path.join(root,'output/presentation/'+(process.argv[2] || 'midpoint_real_data.pptx')),pythonExecutable:process.env.RUNTIME_PYTHON,integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit',...tableOwners.flatMap(n=>['--require-native-table-slide',String(n)])],explicitTotalSlideCount:content.length,requiredNativeTableOwnerSlides:tableOwners,fontPolicy:{basis:'design',families:['Aptos']},verifyArtifactToolImport:true,receiptPath:path.join(root,'.build/'+(process.argv[2] || 'midpoint_real_data.pptx')+'.validation.json')});
+await finalizePresentation({workspaceDir:root,candidatePath:path.join(root,'.build/midpoint_real_candidate.pptx'),finalPath:path.join(root,'output/presentation/'+(process.argv[2] || 'midpoint_real_data.pptx')),pythonExecutable:process.env.RUNTIME_PYTHON,integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit',...tableOwners.flatMap(n=>['--require-native-table-slide',String(n)])],explicitTotalSlideCount:content.length,requiredNativeChartOwnerSlides:chartOwners,materializeLiteralChartWorkbooks:chartOwners.length>0,requiredNativeTableOwnerSlides:tableOwners,fontPolicy:{basis:'design',families:['Aptos']},verifyArtifactToolImport:true,receiptPath:path.join(root,'.build/'+(process.argv[2] || 'midpoint_real_data.pptx')+'.validation.json')});

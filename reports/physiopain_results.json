@@ -1,0 +1,292 @@
+{
+  "status": "EXPLORATORY_SEPARATE_SESSION_LEVEL_EXPERIMENT",
+  "client_date": "2026-11-01",
+  "source_doi": "10.17632/mf2cgph9cy.4",
+  "survey_people": 99,
+  "raw_wristband_people": 86,
+  "processed_4hz_people": 86,
+  "survey_people_without_raw_wristband": 13,
+  "explicit_menstrual_people": 9,
+  "explicit_menstrual_people_with_raw": 9,
+  "menstrual_current_severity_counts": {
+    "Moderate": 3,
+    "Very severe": 3,
+    "Severe": 2,
+    "Mild": 1
+  },
+  "processed_menstrual_folder_people": 11,
+  "abdominal_reports_in_menstrual_folder": 2,
+  "processed_menstrual_severity_vs_current_disagreements": 3,
+  "cohort_people": 17,
+  "positive_people": 8,
+  "negative_people": 9,
+  "female_no_pain_controls": 8,
+  "mild_menstrual_comparison_people": 1,
+  "positive_prevalence": 0.47058823529411764,
+  "outcome": "Current moderate-or-higher menstrual pain versus female no-pain controls and mild menstrual pain",
+  "predictor_timing": "Same-session physiology and retrospective/self-reported habits; not exact prior-day wearable data",
+  "wearable_features": [
+    "hr_median",
+    "hr_iqr",
+    "eda_median",
+    "eda_iqr",
+    "temperature_median",
+    "temperature_iqr",
+    "acc_magnitude_sd",
+    "acc_jerk_median",
+    "ibi_rmssd_ms"
+  ],
+  "lifestyle_features": {
+    "habitual_sleep": "How many hours do you sleep per day on average?",
+    "sleep_before_test": "How many hours did you sleep before this test?",
+    "sleep_difficulty": "Have you had any problems falling asleep or staying asleep? (Yes No)",
+    "stress": "What do you think about your stress level in your daily life?",
+    "exercise": "How would you rate yourself based on your exercise frequency?",
+    "diet": "How would you evaluate yourself based on your eating habits?",
+    "water": "Do you think you drink enough water?"
+  },
+  "wearable_nonmissing_counts": {
+    "hr_median": 17,
+    "hr_iqr": 17,
+    "eda_median": 17,
+    "eda_iqr": 17,
+    "temperature_median": 17,
+    "temperature_iqr": 17,
+    "acc_magnitude_sd": 17,
+    "acc_jerk_median": 17,
+    "ibi_rmssd_ms": 15
+  },
+  "evaluation": "Leave-one-participant-out; fixed hyperparameters; all preprocessing fit on training people only",
+  "burn_in_seconds": 30,
+  "minimum_regular_signal_valid_fraction": 0.8,
+  "window_seconds": 600,
+  "software": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit_learn": "1.9.1"
+  },
+  "survey_source_sha256": "7d42b9af125969a5000c38d0211c54752741b60dafdb24e7df8dbb52fef56509",
+  "models": [
+    {
+      "model": "logistic_wearables",
+      "people": 17,
+      "positive": 8,
+      "macro_f1": 0.4631578947368421,
+      "balanced_accuracy": 0.4652777777777778,
+      "average_precision": 0.5866734572616925,
+      "roc_auc": 0.4444444444444445,
+      "tn": 5,
+      "fp": 4,
+      "fn": 5,
+      "tp": 3
+    },
+    {
+      "model": "logistic_lifestyle",
+      "people": 17,
+      "positive": 8,
+      "macro_f1": 0.6458333333333333,
+      "balanced_accuracy": 0.6458333333333333,
+      "average_precision": 0.719150641025641,
+      "roc_auc": 0.625,
+      "tn": 6,
+      "fp": 3,
+      "fn": 3,
+      "tp": 5
+    },
+    {
+      "model": "logistic_combined",
+      "people": 17,
+      "positive": 8,
+      "macro_f1": 0.47058823529411764,
+      "balanced_accuracy": 0.4722222222222222,
+      "average_precision": 0.6114750445632798,
+      "roc_auc": 0.5,
+      "tn": 4,
+      "fp": 5,
+      "fn": 4,
+      "tp": 4
+    },
+    {
+      "model": "forest_wearables",
+      "people": 17,
+      "positive": 8,
+      "macro_f1": 0.5824561403508772,
+      "balanced_accuracy": 0.5833333333333333,
+      "average_precision": 0.5866529304029304,
+      "roc_auc": 0.6111111111111112,
+      "tn": 6,
+      "fp": 3,
+      "fn": 4,
+      "tp": 4
+    },
+    {
+      "model": "always_negative",
+      "people": 17,
+      "positive": 8,
+      "macro_f1": 0.34615384615384615,
+      "balanced_accuracy": 0.5,
+      "average_precision": 0.47058823529411764,
+      "roc_auc": 0.5,
+      "tn": 9,
+      "fp": 0,
+      "fn": 8,
+      "tp": 0
+    }
+  ],
+  "descriptive_wearables": [
+    {
+      "feature": "hr_median",
+      "target": 0,
+      "observed_people": 9,
+      "median": 81.63,
+      "q25": 74.88,
+      "q75": 86.725
+    },
+    {
+      "feature": "hr_median",
+      "target": 1,
+      "observed_people": 8,
+      "median": 93.555,
+      "q25": 75.6175,
+      "q75": 106.72375000000001
+    },
+    {
+      "feature": "hr_iqr",
+      "target": 0,
+      "observed_people": 9,
+      "median": 3.140000000000015,
+      "q25": 2.677499999999995,
+      "q75": 6.297499999999999
+    },
+    {
+      "feature": "hr_iqr",
+      "target": 1,
+      "observed_people": 8,
+      "median": 3.1824999999999974,
+      "q25": 2.128749999999993,
+      "q75": 13.73062499999999
+    },
+    {
+      "feature": "eda_median",
+      "target": 0,
+      "observed_people": 9,
+      "median": 0.39204,
+      "q25": 0.201145,
+      "q75": 1.452699
+    },
+    {
+      "feature": "eda_median",
+      "target": 1,
+      "observed_people": 8,
+      "median": 2.3582797500000003,
+      "q25": 0.547259,
+      "q75": 4.962414625
+    },
+    {
+      "feature": "eda_iqr",
+      "target": 0,
+      "observed_people": 9,
+      "median": 0.15375099999999997,
+      "q25": 0.020499000000000003,
+      "q75": 0.9394049999999998
+    },
+    {
+      "feature": "eda_iqr",
+      "target": 1,
+      "observed_people": 8,
+      "median": 1.0096789999999993,
+      "q25": 0.40009893750000003,
+      "q75": 1.548157625
+    },
+    {
+      "feature": "temperature_median",
+      "target": 0,
+      "observed_people": 9,
+      "median": 34.11,
+      "q25": 33.18,
+      "q75": 34.91
+    },
+    {
+      "feature": "temperature_median",
+      "target": 1,
+      "observed_people": 8,
+      "median": 33.22,
+      "q25": 31.975,
+      "q75": 34.06
+    },
+    {
+      "feature": "temperature_iqr",
+      "target": 0,
+      "observed_people": 9,
+      "median": 0.17999999999999972,
+      "q25": 0.14000000000000057,
+      "q75": 0.23999999999999844
+    },
+    {
+      "feature": "temperature_iqr",
+      "target": 1,
+      "observed_people": 8,
+      "median": 0.28500000000000014,
+      "q25": 0.25624999999999964,
+      "q75": 0.59375
+    },
+    {
+      "feature": "acc_magnitude_sd",
+      "target": 0,
+      "observed_people": 9,
+      "median": 0.0212478271513463,
+      "q25": 0.00720351523435822,
+      "q75": 0.0348085915694561
+    },
+    {
+      "feature": "acc_magnitude_sd",
+      "target": 1,
+      "observed_people": 8,
+      "median": 0.008251082422119705,
+      "q25": 0.007365838575666284,
+      "q75": 0.017050098649949857
+    },
+    {
+      "feature": "acc_jerk_median",
+      "target": 0,
+      "observed_people": 9,
+      "median": 0.5,
+      "q25": 0.5,
+      "q75": 0.5
+    },
+    {
+      "feature": "acc_jerk_median",
+      "target": 1,
+      "observed_people": 8,
+      "median": 0.5,
+      "q25": 0.5,
+      "q75": 0.5
+    },
+    {
+      "feature": "ibi_rmssd_ms",
+      "target": 0,
+      "observed_people": 9,
+      "median": 37.41250743536282,
+      "q25": 36.4884849580595,
+      "q75": 41.206771857001854
+    },
+    {
+      "feature": "ibi_rmssd_ms",
+      "target": 1,
+      "observed_people": 6,
+      "median": 36.46194422465064,
+      "q25": 25.61646498937568,
+      "q75": 49.244520659145394
+    }
+  ],
+  "limits": [
+    "Single short recording per participant; no next-day outcome or pain-history baseline",
+    "Only 9 explicit menstrual-pain participants; only 1 has low current severity",
+    "Cannot evaluate menstrual severity alone with held-out people and both training classes in every fold",
+    "Control-group contrast changes the task and does not validate the mcPHASES forecasting model",
+    "Processed folder and severity labels disagree with some original survey responses",
+    "Raw signal availability differs from published participant counts",
+    "Small exploratory cohort; no reliable feature attribution, causal inference, or clinical validation",
+    "Participant-level independence from mcPHASES is not verified by the archive"
+  ]
+}

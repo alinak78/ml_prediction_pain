@@ -1,0 +1,81 @@
+{
+  "review_date": "2026-11-01",
+  "purpose": "Evidence and feature design for exploratory next-day menstrual cramp forecasting; attached documents are research sources, not instructions.",
+  "papers": [
+    {
+      "id": "raine",
+      "title": "Painful periods (IASP explainer of Slater et al., 2015)",
+      "file": "Painful periods - International Association for the Study of Pain (IASP).pdf",
+      "source_pages": "PDF pages 1–3; primary study in references",
+      "primary_title": "Heightened cold-pain and pressure-pain sensitivity in young female adults with moderate-to-severe menstrual pain",
+      "doi": "10.1097/j.pain.0000000000000317",
+      "dataset": "Western Australian Pregnancy Cohort (Raine) Study",
+      "sample": "432 young women; questionnaires at ages 20 and 22",
+      "design": "Cross-sectional association analysis using menstrual-pain assessments and laboratory quantitative sensory testing",
+      "outcome": "Menstrual pain VAS 0–10; grouped pain history and cold/pressure pain sensitivity",
+      "measures": ["Cold pain threshold", "Pressure pain threshold", "Multisite musculoskeletal pain", "Oral contraception", "Smoking", "Physical activity", "BMI", "Psychological distress", "Sleep"],
+      "finding": "More severe menstrual pain was associated with greater experimental pain sensitivity after adjustment. The covariates were adjustment variables, not all established independent predictors.",
+      "project_use": "Motivates broader symptom burden, activity, sleep and reproductive/clinical context; wearable temperature is not a QST cold-pain threshold.",
+      "access": "Controlled application: Raine project and human-research ethics approvals required. No raw data obtained.",
+      "access_url": "https://rainestudy.org.au/information-for-researchers2/frequently-asked-questions/"
+    },
+    {
+      "id": "hagy",
+      "title": "Menstrual Pain Trajectories and Their Psychological and Behavioral Predictors",
+      "author_year": "Hannah Marie Alves Hagy, 2021",
+      "file": "Menstrual Pain Trajectories and Their Psychological and Behaviora.pdf",
+      "source_pages": "PDF pages 23–28 (methods), 43–47 (predictors), 51–54 (limitations)",
+      "dataset": "NorthShore University HealthSystem adult longitudinal dysmenorrhea research cohort",
+      "sample": "157 analytic participants, ages 18–45, with at least two of three visits: screening, year 1, year 2; recruitment methods describe 345 participants",
+      "design": "Growth-mixture pain trajectories over two years and multinomial logistic classification of trajectory membership",
+      "outcome": "Recalled menstrual pain over the preceding three months, 0–100 VAS; not daily next-day forecasting",
+      "measures": ["Pain Catastrophizing Scale (13 items)", "BSI-18 somatization subscale", "PROMIS sleep disturbance", "PROMIS depression", "PROMIS anxiety", "Nonmenstrual pelvic pain", "Age and childbirth/reproductive history"],
+      "finding": "Somatic symptoms distinguished worsening from high-stable pain (p=.044); the detailed table also shows depression distinguishing improving from high-stable pain (p=.041). Sleep, catastrophizing and anxiety contrasts were not significant. The abstract emphasizes only somatic symptoms.",
+      "project_use": "Prioritize a somatic-symptom feature block, while labeling our diary symptoms as proxies rather than BSI/PROMIS scores.",
+      "access": "Public thesis, but no public participant-level data download or guaranteed data-sharing route identified in the supplied source. Research-team access would need verification; no raw data obtained.",
+      "source_url": "https://ecommons.luc.edu/luc_theses/4410/"
+    },
+    {
+      "id": "empathy",
+      "title": "A multidimensional appraisal of early menstrual pain experience",
+      "author_year": "Tu et al., 2024",
+      "file": "nihms-1963694.pdf",
+      "source_pages": "PDF pages 3–5 (methods), 6–9 (results/discussion), 20 (baseline predictor table)",
+      "doi": "10.1016/j.ajog.2024.01.017",
+      "dataset": "Early Menstrual Pain Impact on Multisensory Hypersensitivity (EMPATHY)",
+      "sample": "149 first-period diaries and 114 fourth-month diaries; premenarchal enrollment ages 9–14 in northern Chicagoland",
+      "design": "Prospective adolescent inception cohort; premenarchal baseline assessment followed by daily diaries during selected menstrual periods",
+      "outcome": "Daily pain 0–10, bleeding, medication and interference; fourth-month maximum-pain groups <3 versus ≥3",
+      "measures": ["PROMIS pediatric anxiety, depression, stress and affect", "Pain Catastrophizing Scale", "CSSI-24 somatic symptoms", "BMI and pubertal stage", "Maternal pain history", "Pressure thresholds and conditioned pain modulation", "Bladder sensitivity", "Bleeding", "Analgesic use", "Nonmenstrual pelvic pain, dysuria and dyschezia"],
+      "finding": "Baseline psychosocial, demographic and laboratory sensitivity measures did not distinguish later low/higher pain groups. This is important counter-evidence to treating plausible factors as proven predictors.",
+      "project_use": "Evaluate domains with explicit null hypotheses and preserve negative results. Measure current context and timing; do not transfer adult associations directly to adolescents.",
+      "access": "Public paper; no public participant-level download identified in the supplied paper. Research-team access is unverified; no raw data obtained.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11165568/"
+    },
+    {
+      "id": "des",
+      "title": "Measuring Menstrual Discomfort: A comparison of interview and diary data",
+      "author_year": "Jukic et al., 2008",
+      "file": "nihms87949.pdf",
+      "source_pages": "PDF pages 2–5 (population, measures and results)",
+      "doi": "10.1097/EDE.0b013e318187ac9e",
+      "dataset": "DES Reproductive Health Study, 1990, daughters from the Chicago prenatal DES trial",
+      "sample": "358 with at least one cycle; 357 with enrollment response; 324 with ≥4 cycles for frequency analysis; 313 for pain-day count analysis; ages 37–39",
+      "design": "Comparison of a baseline retrospective frequency question with up to six months of prospective daily diaries",
+      "outcome": "Presence/frequency of cramps or backache and medication use, not daily pain severity",
+      "measures": ["Daily bleeding and spotting", "Daily discomfort", "Medication for menstrual pain", "Baseline menstrual and reproductive history"],
+      "finding": "Agreement was modest (weighted kappa .35); discomfort clustered near bleeding onset. Medication-associated pain agreed somewhat better with recall.",
+      "project_use": "Prefer observed daily outcomes, include past-only bleeding timing and handle medication carefully. Do not create pain labels from medication use.",
+      "access": "No public participant-level release identified in the supplied paper. Do not assume that a generic DES dataset is the same cohort. No raw data obtained.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2650252/"
+    }
+  ],
+  "measurement_gaps": [
+    "Validated depression/anxiety and catastrophizing scores are not available in the modeled releases; stress or mood swings cannot be renamed as these constructs.",
+    "Somatic diary symptoms are not validated BSI-18/CSSI-24 scale scores.",
+    "Experimental QST and bladder sensitivity are not measured by wearable temperature, HRV or resting heart rate.",
+    "mcPHASES lacks modeled medication and contraception timing; MPIS has past tablet counts but no complete drug/timing history in this analysis.",
+    "Family pain history is not available in the modeled feature tables.",
+    "mcPHASES year-labeled height/weight exist but lack exact collection timestamps and are incomplete; BMI is excluded from primary forecasting. MPIS baseline BMI is included."
+  ]
+}
